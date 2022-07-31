@@ -19,14 +19,57 @@
   </head>
 
   <body>
+    <div class="container center">
+      <h1>SIT 725 Prac 2</h1>
+    </div>
+    <div class="container center">
+      <h2>Basic Calculator</h2>
+      <h5>Siddharth (222469478)</h5>
+    </div>
     <div class="container">
       <div class="row">
         <div class="col s12">
-          <h1 id="heading" class="center-align">SIT 725 Practical 2</h1>
+          <div class="input-field">
+            <input type="number" id="num1" name="num1" />
+            <label for="num1">Number 1</label>
+          </div>
+          <div class="input-field">
+            <input type="number" id="num2" name="num2" />
+            <label for="num1">Number 2</label>
+          </div>
+          <div class="row">
+            <div class="col s3">
+              <div class="input-field center">
+                <button class="btn" id="addButton">Add</button>
+              </div>
+            </div>
+            <div class="col s3">
+              <div class="input-field center">
+                <button class="btn" id="subtractButton">Subtract</button>
+              </div>
+            </div>
+            <div class="col s3">
+              <div class="input-field center">
+                <button class="btn" id="multiplyButton">Multiply</button>
+              </div>
+            </div>
+            <div class="col s3">
+              <div class="input-field center">
+                <button class="btn" id="divideButton">Divide</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="resultTemplate" style="display: none">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title" id="resultText"></span>
         </div>
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
