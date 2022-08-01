@@ -1,75 +1,154 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>SIT 725 Practical 2</title>
-    <meta name="description" content="SIT 725 Prac 2" />
+    <title>SIT 725 Prac 3</title>
+    <meta name="description" content="basic template for SIT 725 Prac 3" />
     <meta name="author" content="SitePoint" />
-
-    <meta property="og:title" content="SIT 725 Prac 2" />
+    <meta property="og:title" content="SIT 725 Prac 3" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="SIT 725 Prac 2" />
+    <meta
+      property="og:description"
+      content="basic template for SIT 725 Prac 3"
+    />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
-
   <body>
-    <div class="container center">
-      <h1>SIT 725 Prac 2</h1>
-    </div>
-    <div class="container center">
-      <h2>Basic Calculator</h2>
-      <h5>Siddharth (222469478)</h5>
-    </div>
-    <div class="container">
+    
+    <!-- navbar -->
+    <header>
+      <nav class="nav-wrapper transparent">
+        <div class="container">
+          <a href="#" class="brand-logo">Siddharth</a>
+          <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <a
+                href="https://www.linkedin.com/in/siddharth-7206581a7"
+                class="waves-effect waves-light btn-flat"
+                ><i class="fab fa-linkedin left"></i>LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/SidvdiS"
+                class="waves-effect waves-light btn-flat"
+                ><i class="fab fa-github left"></i>Github</a
+              >
+            </li>
+          </ul>
+          <ul class="sidenav grey lighten-2" id="mobile-menu">
+            <li>
+              <a href="https://www.linkedin.com/in/siddharth-7206581a7"
+                >LinkedIn</a
+              >
+            </li>
+            <li><a href="https://github.com/SidvdiS">Github</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div>
+        <h4 class="center white-text">SIT725 Practical 3 (Week 3)</h4>
+        <h5 class="center white-text">
+          This is a demo application that tries to use a few components from
+          materialize and through this practical we try to have some fun with
+          Materialize and its components
+        </h6>
+      </div>
+    </header>
+
+    <!-- Card and Form -->
+    <section class="section container">
       <div class="row">
-        <div class="col s12">
-          <div class="input-field">
-            <input type="number" id="num1" name="num1" />
-            <label for="num1">Number 1</label>
-          </div>
-          <div class="input-field">
-            <input type="number" id="num2" name="num2" />
-            <label for="num1">Number 2</label>
-          </div>
-          <div class="row">
-            <div class="col s3">
-              <div class="input-field center">
-                <button class="btn" id="addButton">Add</button>
-              </div>
+        <div class="col s12 l5">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/materialize.jpg" />
             </div>
-            <div class="col s3">
-              <div class="input-field center">
-                <button class="btn" id="subtractButton">Subtract</button>
-              </div>
+            <div class="card-content">
+              <p>
+                Designed by Google, Materialize is a responsive frontend web application framework that
+                combines the principles of design along with
+                innovation and technology. 
+              </p>
             </div>
-            <div class="col s3">
-              <div class="input-field center">
-                <button class="btn" id="multiplyButton">Multiply</button>
-              </div>
-            </div>
-            <div class="col s3">
-              <div class="input-field center">
-                <button class="btn" id="divideButton">Divide</button>
-              </div>
+            <div class="card-action">
+              <a href="https://materializecss.com/">Visit</a>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="container" id="resultTemplate" style="display: none">
-      <div class="card blue-grey darken-1">
-        <div class="card-content white-text">
-          <span class="card-title" id="resultText"></span>
+        <div class="col s12 l5 offset-l2">
+          <div class="input-field">
+            <i class="material-icons prefix">person</i>
+            <input type="text" id="name" />
+            <label for="name">Full Name</label>
+          </div>
+          <div class="input-field">
+            <i class="material-icons prefix">email</i>
+            <input type="email" id="email" />
+            <label for="email">Your Email</label>
+          </div>
+          <div class="input-field">
+            <i class="material-icons prefix">lock</i>
+            <input type="password" id="password" />
+            <label for="password">Password</label>
+          </div>
+          <div class="input-field center">
+            <button class="btn modal-trigger" data-target="modal1">
+              Submit
+            </button>
+          </div>
         </div>
       </div>
+    </section>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Confirmation</h4>
+        <p>Are you sure you want to submit?</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-red btn-flat"
+          >Cancel</a
+        >
+        <button
+          class="modal-close waves-effect waves-green btn-flat"
+          onclick="submitForm()"
+        >
+          Ok
+        </button>
+      </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="script.js"></script>
+
+    <!-- footer -->
+    <footer class="page-footer grey darken-3">
+      <div class="footer-copyright grey darken-4">
+        <div class="container center-align">
+          &copy; 2022 Siddharth 222469478
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
