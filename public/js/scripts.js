@@ -6,7 +6,7 @@ $(document).ready(function () {
 const submitForm = () => {
   let formData = {};
 
-  formData.last_name = $("#name").val();
+  formData.full_name = $("#name").val();
 
   formData.password = $("#password").val();
 
