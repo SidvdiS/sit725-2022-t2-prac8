@@ -1,16 +1,64 @@
-$(document).ready(function () {
-  $(".sidenav").sidenav();
-  $(".modal").modal();
-});
+const addSkillToApp = (skill) => {
+  $.ajax({
+    url: "/api/skills",
+    data: skill,
+    type: "POST",
+    success: (result) => {
+      location.reload();
+    },
+  });
+};
 
 const submitForm = () => {
   let formData = {};
 
-  formData.full_name = $("#name").val();
+  formData.img = $("#image").val();
 
-  formData.password = $("#password").val();
+  formData.desc = $("#desc").val();
 
-  formData.email = $("#email").val();
+  formData.url = $("#url").val();
 
   console.log("Form Data Submitted: ", formData);
+  addSkillToApp(formData);
 };
+
+const addCards = (items) => {
+  console.log(items);
+  items.forEach((item) => {
+    let itemToAppend =
+      '<div class="col s12 l6">' +
+      '<div class="card">' +
+      '<div class="card-image">' +
+      '<img src="' +
+      item.img +
+      '"/>' +
+      "</div>" +
+      '<div class="card-content">' +
+      "<p>" +
+      item.desc +
+      "</p>" +
+      "</div>" +
+      '<div class="card-action">' +
+      '<a href="' +
+      item.url +
+      '">Visit</a>' +
+      "</div>" +
+      "</div>" +
+      "</div>";
+    $("#card-section").append(itemToAppend);
+  });
+};
+
+const getSkills = () => {
+  $.get("/api/skills", (response) => {
+    if (response.statusCode == 200) {
+      addCards(response.data);
+    }
+  });
+};
+
+$(document).ready(function () {
+  $(".sidenav").sidenav();
+  $(".modal").modal();
+  getSkills();
+});
