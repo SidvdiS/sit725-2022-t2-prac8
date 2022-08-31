@@ -26,12 +26,12 @@ const addCards = (items) => {
   console.log(items);
   items.forEach((item) => {
     let itemToAppend =
-      '<div class="col s12 l6">' +
+      '<div class="col s12 l4">' +
       '<div class="card">' +
       '<div class="card-image">' +
       '<img src="' +
       item.img +
-      '"/>' +
+      '" height=100 />' +
       "</div>" +
       '<div class="card-content">' +
       "<p>" +
