@@ -1,28 +1,32 @@
 {
-  "name": "sit725-2022-t2-prac5",
+  "name": "sit725-2022-t2-prac6",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "devStart": "nodemon server.js"
+    "devStart": "nodemon server.js",
+    "test": "mocha --reporter spec"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SidvdiS/sit725-2022-t2-prac5.git"
+    "url": "git+https://github.com/SidvdiS/sit725-2022-t2-prac6.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SidvdiS/sit725-2022-t2-prac5/issues"
+    "url": "https://github.com/SidvdiS/sit725-2022-t2-prac6/issues"
   },
-  "homepage": "https://github.com/SidvdiS/sit725-2022-t2-prac5#readme",
+  "homepage": "https://github.com/SidvdiS/sit725-2022-t2-prac6#readme",
   "dependencies": {
+    "chai": "^4.3.6",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "mongodb": "^4.9.0"
+    "mocha": "^10.0.0",
+    "mongodb": "^4.9.0",
+    "request": "^2.88.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"

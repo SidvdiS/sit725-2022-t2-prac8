@@ -1,3 +1,3 @@
 # Practical5
 
-In this practical we implement API integration to frontend implementation. We use mongoDb as a database to persist the data.
+In this practical we write test cases using Mocha and assertion library Chai to test REST APIs.
