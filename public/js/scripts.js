@@ -57,6 +57,20 @@ const getSkills = () => {
   });
 };
 
+// Pictures Slideshow using socket.io
+imgSlideArray = [
+  "../images/focus.jpg",
+  "../images/slide1.jpg",
+  "../images/slide2.jpg",
+  "../images/slide3.jpg",
+];
+
+let socket = io();
+
+socket.on("slideShow", (msg) => {
+  $("header").css({ "background-image": "url(" + imgSlideArray[msg] + ")" });
+});
+
 $(document).ready(function () {
   $(".sidenav").sidenav();
   $(".modal").modal();
