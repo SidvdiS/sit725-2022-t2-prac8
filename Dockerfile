@@ -1,10 +1,10 @@
-FROM node:16-alpine
+FROM node:11-alpine
 
 WORKDIR /app
 
 COPY . .
 
-EXPOSE 8080
+EXPOSE 3000
 
 RUN npm install
 
