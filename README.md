@@ -1,6 +1,5 @@
 
-
-Dockerization: SIT725 Practical 8
+## Dockerization: SIT725 Practical 8
 
 Run the below commands after Docker Desktop is installed:
 
